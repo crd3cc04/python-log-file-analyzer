@@ -1,0 +1,6 @@
+2024-10-12 10:15:32 INFO User login successful
+2024-10-12 10:16:10 WARNING Disk space low
+2024-10-12 10:17:45 ERROR Failed to connect to database
+2024-10-12 10:18:02 INFO Scheduled backup started
+2024-10-12 10:19:11 ERROR Backup process failed
+2024-10-12 10:20:55 INFO User logout successful
