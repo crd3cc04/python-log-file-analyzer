@@ -8,9 +8,8 @@ A lightweight Python script that scans log files and generates a summary of INFO
 
 - Counts INFO, WARNING, and ERROR messages  
 - Extracts and analyzes error messages  
-- Identifies the most common error  
-- Works with any plain‑text log file  
-- Simple, clean Python code  
+- Identifies the most common error    
+- Fully tested with pytest  
 
 ---
 
@@ -20,10 +19,16 @@ A lightweight Python script that scans log files and generates a summary of INFO
 python-log-file-analyzer/
 │
 ├── src/
+|   ├── init.py
 │   └── log_analyzer.py
 │
 ├── sample_logs/
 │   └── system.log
+|
+├── tests/
+|   └── test_log_analyzer.py
+|
+├── conftest.py
 │
 └── README.md
 ```
@@ -53,6 +58,28 @@ Most common error: 'Backup process failed' occurred 1 times
 
 ---
 
+## 🧪 Running Tests
+
+To run the full test suite:
+
+```bash
+pytest -v
+```
+
+## 📘 Sample Log Format
+
+```code
+2024-06-01 12:00:00 INFO User logged in
+2024-06-01 12:00:00 ERROR Something broke
+```
+Malfromed lines are automatically detected and marked as:
+```code
+level = 'UNKNOWN"
+timestamp = None
+```
+
+---
+
 ## 📌 Why This Project Matters
 
 This script demonstrates:
@@ -72,4 +99,7 @@ Perfect for showcasing practical scripting ability on a GitHub portfolio.
 - Export results to CSV  
 - Add colorized terminal output  
 - Support for multiple log formats  
-- Regex‑based filtering  
+- Regex‑based filtering
+- Add CLI interface
+- Add JSON output option
+- Add summary export to file  
